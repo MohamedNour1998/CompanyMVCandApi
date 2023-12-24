@@ -1,0 +1,59 @@
+﻿@inject Demo.BL.Interface.IDepartmentRep department
+@inject Demo.BL.Interface.IEmployeeRep employee
+
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@section BootstrapSelection
+    {
+    <link href="~/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+}
+
+<h2>Index</h2>
+
+
+<table border="1">
+    <tr>
+        <th>Id </th>
+        <th>Name </th>
+        <th>Salary </th>
+    </tr>
+    @foreach (var item in employee.Get())
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Salary</td>
+        </tr>
+    }
+</table>
+
+<table border="1">
+    <tr>
+        <th>Id </th>
+        <th>Name </th>
+        <th>Code </th>
+    </tr>
+    @foreach (var item in department.Get())
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Code</td>
+        </tr>
+    }
+</table>
+
+<select>
+    <option>Choose Name</option>
+    @foreach (var item in department.Get())
+
+    {
+        <option value="@item.Id">
+            @item.Name
+        </option>
+    }
+</select>

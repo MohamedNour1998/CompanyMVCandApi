@@ -1,0 +1,65 @@
+﻿@model Demo.BL.Models.EmployeeVM
+@{
+    ViewData["Title"] = "Details";
+}
+
+@section BootstrapSelection
+    {
+    <link href="~/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+}
+
+<div class="block-header">
+    <h2>Details</h2>
+</div>
+
+
+
+<label for="Id">Id</label>
+<input type="text" class="form-control" asp-for="Id" disabled />
+<br />
+
+<label for="Name">Name</label>
+<input type="text" class="form-control" asp-for="Name" disabled />
+<br />
+
+<label for="Salary">Salary</label>
+<input type="text" class="form-control" asp-for="Salary" disabled />
+<br />
+
+<label for="HireDate">HireDate</label>
+<input type="text" class="form-control" asp-for="HireDate" disabled />
+<br />
+
+<label for="Email">Email</label>
+<input type="text" class="form-control" asp-for="Email" disabled />
+<br />
+
+<label for="Adress">Adress</label>
+<input type="text" class="form-control" asp-for="Adress" disabled />
+<br />
+
+<label for="Notes">Notes</label>
+<textarea class="form-control" asp-for="Notes" disabled></textarea>
+<br />
+
+<div class="demo-checkbox">
+    <input type="checkbox" asp-for="IsActive" checked="" disabled>
+    <label asp-for="IsActive">IsActive</label>
+</div>
+<br />
+
+<select asp-for="DepartmentId" asp-items="(SelectList)ViewBag.Departmentlist" disabled>
+    <option>Choose Department</option>
+
+</select>
+
+<br />
+<br />
+
+
+<center>
+
+    <a asp-controller="Employee" asp-action="Index" class="btn btn-primary">Back to data</a>
+    <a asp-controller="Employee" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+    <a asp-controller="Employee" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+</center>

@@ -1,0 +1,49 @@
+﻿@model Demo.BL.Models.DepartmentVM
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="block-header">
+    <h2> Update</h2>
+</div>
+
+
+
+
+
+<form asp-controller="Department" asp-action="Edit">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+
+    <input type="hidden" class="form-control" asp-for="Id" />
+    <br />
+
+    <label for="Name">Department Name</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <span asp-validation-for="Name" class="text-danger"></span> @*use to make validation*@
+    <br />
+
+    <label for="Code">Department Code</label>
+    <input type="text" class="form-control" asp-for="Code" />
+    <span asp-validation-for="Code" class="text-danger"></span> @*use to make validation*@
+    <br />
+    <br />
+
+
+    <center>
+
+        <a asp-controller="Department" asp-action="Index" class="btn btn-primary">Back to data</a>
+        <input type="submit" value="Edit" class="btn btn-success" />
+        <input type="reset" value="cancel" class="btn btn-warning" />
+        <a asp-controller="Department" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+    </center>
+</form>
+
+
+
+@section MicrosoftValidation{
+
+    <script src="~/plugins/jquery-validation/jquery.validate.js"></script>
+    <script src="~/plugins/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

@@ -1,0 +1,78 @@
+﻿@model Demo.BL.Models.EmployeeVM
+@{
+    ViewData["Title"] = "Delete";
+}
+
+@section BootstrapSelection
+    {
+    <link href="~/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+}
+
+<div class="block-header">
+    <h2>Delete</h2>
+</div>
+
+
+
+<form asp-controller="Employee" asp-action="Delete">
+
+    <br />
+    <center>
+        <h1>
+            Are you sure to delete this data
+        </h1>
+    </center>
+
+    <label for="Id">Id</label>
+    <input type="text" class="form-control" asp-for="Id" readonly />
+    <br />
+
+    <label for="Name">Name</label>
+    <input type="text" class="form-control" asp-for="Name" readonly />
+    <br />
+
+    <label for="Salary">Salary</label>
+    <input type="text" class="form-control" asp-for="Salary" readonly />
+    <br />
+
+    <label for="HireDate">HireDate</label>
+    <input type="text" class="form-control" asp-for="HireDate" readonly />
+    <br />
+
+    <label for="Email">Email</label>
+    <input type="text" class="form-control" asp-for="Email" readonly />
+    <br />
+
+    <label for="Adress">Adress</label>
+    <input type="text" class="form-control" asp-for="Adress" readonly />
+    <br />
+
+    <label for="Notes">Notes</label>
+<textarea class="form-control" asp-for="Notes" readonly></textarea>
+    <br />
+
+    <div class="demo-checkbox">
+        <input type="checkbox" asp-for="IsActive" checked="" readonly>
+        <label asp-for="IsActive">IsActive</label>
+    </div>
+    <br />
+
+    <select asp-for="DepartmentId" asp-items="(SelectList)ViewBag.Departmentlist" readonly>
+        <option>Choose Department</option>
+
+    </select>
+    <br />
+    <input type="hidden" asp-for="Id"/>
+    <input type="hidden" asp-for="PhotoName" />
+    <input type="hidden" asp-for="CvName" />
+    <br />
+
+
+    <center>
+
+        <a asp-controller="Employee" asp-action="Index" class="btn btn-primary">Back to data</a>
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-controller="Employee" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-success">Edit</a>
+    </center>
+</form>
+

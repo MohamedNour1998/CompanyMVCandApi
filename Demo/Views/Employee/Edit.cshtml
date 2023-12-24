@@ -1,0 +1,75 @@
+﻿@model Demo.BL.Models.EmployeeVM
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@section BootstrapSelection
+    {
+    <link href="~/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+}
+
+<div class="block-header">
+    <h2>update</h2>
+</div>
+
+<form class="form-group" asp-controller="Employee" asp-action="Edit">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    @*using for and id to when click to label make focus to text to write*@
+    <label for="Name">Department Name</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <span asp-validation-for="Name" class="text-danger"></span> @*use to make validation*@
+    <br />
+
+    <label for="Salary">Salary</label>
+    <input type="text" class="form-control" asp-for="Salary" />
+    <span asp-validation-for="Salary" class="text-danger"></span>
+    <br />
+
+    <label for="Email">Email</label>
+    <input type="text" class="form-control" asp-for="Email" />
+    <span asp-validation-for="Email" class="text-danger"></span>
+    <br />
+
+    <label for="HireDate">HireDate</label>
+    <input type="date" class="form-control" asp-for="HireDate" />
+    <span asp-validation-for="HireDate" class="text-danger"></span>
+    <br />
+
+    <label for="Adress">Adress</label>
+    <input type="text" class="form-control" asp-for="Adress" />
+    <span asp-validation-for="Adress" class="text-danger"></span>
+    <br />
+
+    <label for="Notes">Notes</label>
+    <textarea rows="4" class="form-control" asp-for="Notes"></textarea>
+    <span asp-validation-for="Notes" class="text-danger"></span>
+    <br />
+
+    <div class="demo-checkbox">
+        <input type="checkbox" asp-for="IsActive" checked="">
+        <label asp-for="IsActive">IsActive</label>
+        <span asp-validation-for="IsActive" class="text-danger"></span>
+    </div>
+    <br />
+
+    <select asp-for="DepartmentId" asp-items="(SelectList)ViewBag.Departmentlist">
+        <option>Choose Department</option>
+
+    </select>
+    <br /> <br />
+    <center>
+
+        <a asp-controller="Employee" asp-action="Index" class="btn btn-primary">Back to data</a>
+        <input type="submit" value="Edit" class="btn btn-success" />
+        <input type="reset" value="cancel" class="btn btn-warning" />
+        <a asp-controller="Employee" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+    </center>
+</form>
+
+@section MicrosoftValidation{
+
+    <script src="~/plugins/jquery-validation/jquery.validate.js"></script>
+    <script src="~/plugins/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

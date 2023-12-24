@@ -1,0 +1,15 @@
+F:\projects net\Demo.BLL\bin\Debug\net5.0\Demo.BL.deps.json
+F:\projects net\Demo.BLL\bin\Debug\net5.0\Demo.BL.dll
+F:\projects net\Demo.BLL\bin\Debug\net5.0\ref\Demo.BL.dll
+F:\projects net\Demo.BLL\bin\Debug\net5.0\Demo.BL.pdb
+F:\projects net\Demo.BLL\bin\Debug\net5.0\Demo.DAL.dll
+F:\projects net\Demo.BLL\bin\Debug\net5.0\Demo.DAL.pdb
+F:\projects net\Demo.BLL\obj\Debug\net5.0\Demo.BL.csproj.AssemblyReference.cache
+F:\projects net\Demo.BLL\obj\Debug\net5.0\Demo.BL.GeneratedMSBuildEditorConfig.editorconfig
+F:\projects net\Demo.BLL\obj\Debug\net5.0\Demo.BL.AssemblyInfoInputs.cache
+F:\projects net\Demo.BLL\obj\Debug\net5.0\Demo.BL.AssemblyInfo.cs
+F:\projects net\Demo.BLL\obj\Debug\net5.0\Demo.BL.csproj.CoreCompileInputs.cache
+F:\projects net\Demo.BLL\obj\Debug\net5.0\Demo.BL.csproj.CopyComplete
+F:\projects net\Demo.BLL\obj\Debug\net5.0\Demo.BL.dll
+F:\projects net\Demo.BLL\obj\Debug\net5.0\ref\Demo.BL.dll
+F:\projects net\Demo.BLL\obj\Debug\net5.0\Demo.BL.pdb

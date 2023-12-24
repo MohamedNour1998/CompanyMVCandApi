@@ -1,0 +1,27 @@
+﻿@model Demo.BL.Models.MailVM
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<center>
+    <h2>Send MAil</h2>
+    @TempData["Msg"]
+</center>
+
+<form asp-controller="Mail" asp-action="Index" class="form-group">
+
+    <label asp-for="Title">Title</label>
+    <input asp-for="Title" type="text" placeholder="Input the title" class="form-control" />
+    <br />
+
+    <label asp-for="Message">Message</label>
+    <textarea asp-for="Message" rows="4" placeholder="Input the Message" class="form-control"></textarea>
+    <br />
+
+    <center>
+        <input type="submit" value="Send" class="btn btn-primary"/>
+    </center>
+</form>
+

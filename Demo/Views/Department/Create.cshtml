@@ -1,0 +1,35 @@
+﻿@model Demo.BL.Models.DepartmentVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="block-header">
+    <h2>Create New Department</h2>
+</div>
+
+<form class="form-group" asp-controller="Department" asp-action="Create">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    @*using for and id to when click to label make focus to text to write*@
+    <label for="Name">Department Name</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <span asp-validation-for="Name" class="text-danger"></span> @*use to make validation*@
+    <br />
+
+    <label for="Code">Department Code</label>
+    <input type="text" class="form-control" asp-for="Code" />
+    <span asp-validation-for="Code" class="text-danger"></span>
+    <br />
+
+    <center>
+        <input type="submit" value="save" class="btn btn-primary" />
+        <input type="reset" value="cancel" class="btn btn-danger" />
+    </center>
+</form>
+
+@section MicrosoftValidation{
+
+    <script src="~/plugins/jquery-validation/jquery.validate.js"></script>
+    <script src="~/plugins/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
